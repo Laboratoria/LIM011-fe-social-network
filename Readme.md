@@ -149,7 +149,7 @@ anterior en la siguiente sección.
 
 * [ ] [HTML semántico](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
 * [ ] [CSS `flexbox`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
+* [x] Construir tu aplicación respetando el diseño realizado (maquetación).
 
 ### DOM y Web APIs
 
@@ -159,9 +159,9 @@ anterior en la siguiente sección.
 
 ### Javascript
 
-* [ ] [Uso de callbacks](https://developer.mozilla.org/es/docs/Glossary/Callback_function)
+* [x] [Uso de callbacks](https://developer.mozilla.org/es/docs/Glossary/Callback_function)
 * [ ] [Consumo de Promesas](https://scotch.io/tutorials/javascript-promises-for-dummies#toc-consuming-promises)
-* [ ] Uso ES modules
+* [x] Uso ES modules
 ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 | [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
 
@@ -194,9 +194,9 @@ anterior en la siguiente sección.
 
 ### Buenas prácticas de desarrollo
 
-* [ ] Modularización
-* [ ] Nomenclatura / Semántica
-* [ ] Linting
+* [x] Modularización
+* [x] Nomenclatura / Semántica
+* [x] Linting
 
 ***
 
