@@ -80,13 +80,6 @@ El objetivo de usar Firestore en este proyecto, es que aprendes a manejar y pers
 Antes de empezar el proyecto, recuerda agregar tus objetivos de aprendizaje pendientes de tu proyecto
 anterior en la siguiente sección.
 
-### Objetivos de aprendizajes pendientes
-[ ] Manipular arrays (filter | map | sort | reduce).
-[ ] Entender el uso de bucles (for | forEach).
-[ ] Entender la diferencia entre expression y statements.
-[ ] Utilizar funciones (parámetros | argumentos | valor de retorno).
-[ ] Utilizar ES Modules (import | export).
-
 ### HTML y CSS
 
 * [ ] [HTML semántico](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
