@@ -19,6 +19,7 @@ export const vistaRegistro = () => {
       `;
 
   divRegistro.innerHTML = inicioRegistro;
+
   return divRegistro;
 };
 
