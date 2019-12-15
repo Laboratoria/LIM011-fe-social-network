@@ -1,20 +1,20 @@
-
 import { inicioSesion } from '../firebase/firebase-inicio-sesion.js';
-import { vistaRegistro, eventoBotonRegistro } from './registro.js';
 
 // Header:
-const encabezadoLogin = () => {
-  const headerLogin = document.createElement('header');
-  const imageLogin = '<img src=\'https://image.freepik.com/vector-gratis/comida-sana-personas_24908-55204.jpg\' id=\'imgPrincipal\'>';
+export const encabezadoLoginRegistro = () => {
+  const headerLoginRegistro = document.createElement('header');
+  const imageEncabezado = `
+    <img src='https://image.freepik.com/vector-gratis/comida-sana-personas_24908-55204.jpg' id='imgPrincipal'>
+  `;
 
-  headerLogin.innerHTML = imageLogin;
-  document.getElementById('root').appendChild(headerLogin);
+  headerLoginRegistro.innerHTML = imageEncabezado;
+
+  return headerLoginRegistro;
 };
 
-encabezadoLogin();
 
-// Main:
-const formLogin = () => {
+// Main Login
+const mainLoginForm = () => {
   const mainLogin = document.createElement('main');
   const inicioLogin = `
            <section>
@@ -30,31 +30,40 @@ const formLogin = () => {
         `;
 
   mainLogin.innerHTML = inicioLogin;
-  mainLogin.appendChild(vistaRegistro());
 
-  document.getElementById('root').appendChild(mainLogin);
+  return mainLogin;
 };
 
-formLogin();
 
 // Footer:
-const footerLogin = () => {
+export const footerLoginRegistro = () => {
   const piePaginaLogin = document.createElement('footer');
   const contenidoFooter = `
       <p>O bien ingresa con..</p>
       <a href='#'><img src='https://image.flaticon.com/icons/png/512/2392/premium/2392485.png'></a>
-      <a href='#'><img src='https://image.flaticon.com/icons/png/512/145/145804.png'></a>
+      <a href='#'><img src='https://icon-library.net/images/google-icon-search/google-icon-search-19.jpg'></a>
       <p>¿No tienes una cuenta? <a href='#'>Regístrate</a></p>                      
    `;
 
   piePaginaLogin.innerHTML = contenidoFooter;
-  document.getElementById('root').appendChild(piePaginaLogin);
+
+  return piePaginaLogin;
 };
 
-footerLogin();
 
-// Después que se muestre el template, añadimos el evento:
-eventoBotonRegistro();
+// Div contenedor de vista Login
+const divVistaLogin = () => {
+  const divContenedorLogin = document.createElement('div');
+
+  divContenedorLogin.appendChild(encabezadoLoginRegistro());
+  divContenedorLogin.appendChild(mainLoginForm());
+  divContenedorLogin.appendChild(footerLoginRegistro());
+
+  document.getElementById('root').appendChild(divContenedorLogin);
+};
+
+divVistaLogin();
+
 
 // Evento del boton login
 const botonLogin = () => {
