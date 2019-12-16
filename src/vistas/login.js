@@ -16,16 +16,20 @@ export const encabezadoLoginRegistro = () => {
 // Main Login
 const mainLoginForm = () => {
   const mainLogin = document.createElement('main');
+  mainLogin.id = 'mainLogin';
+
   const inicioLogin = `
            <section>
-              <h1>Nutrired</h1>
-              <p>Bienvenido</p>
+              <img src='img/logo.jpeg' id='logoLoginRegistro'>
+              <p class='parrafo'>¡Bienvenido!</p>
            </section>
         
            <section>
-              <input type='email' id='emailLogin' placeholder='Email' maxlength='30' name='usuarioLogin'>
-              <input type='password' id='passwordLogin' placeholder='Password' name='passwordLogin' minlength='6'>
+            <form action="#" method="post">
+              <input type='email' id='emailLogin' class='inputRegistro' placeholder='Email' maxlength='30' name='usuarioLogin'>
+              <input type='password' id='passwordLogin' class='inputRegistro' placeholder='Password' name='passwordLogin' minlength='6'>
               <button type='button' id='botonLogin'>Log in</button>
+            </form>
            </section> 
         `;
 
@@ -38,11 +42,14 @@ const mainLoginForm = () => {
 // Footer:
 export const footerLoginRegistro = () => {
   const piePaginaLogin = document.createElement('footer');
+  piePaginaLogin.id = 'footerLoginRegistro';
   const contenidoFooter = `
-      <p>O bien ingresa con..</p>
-      <a href='#'><img src='https://image.flaticon.com/icons/png/512/2392/premium/2392485.png'></a>
-      <a href='#'><img src='https://icon-library.net/images/google-icon-search/google-icon-search-19.jpg'></a>
-      <p>¿No tienes una cuenta? <a href='#'>Regístrate</a></p>                      
+      <p class='parrafo'>O bien ingresa con..</p>
+      <section id='iconoRedesSociales'>
+      <a href='#'><img src='https://image.flaticon.com/icons/png/512/2392/premium/2392485.png' class='iconRed'></a>
+      <a href='#'><img src='https://icon-library.net/images/google-icon-search/google-icon-search-19.jpg' class='iconRed'></a>
+      </section>
+      <p class='parrafo'>¿No tienes una cuenta? <a href='#' id='enlaceRegistro'>Regístrate</a></p>                      
    `;
 
   piePaginaLogin.innerHTML = contenidoFooter;
@@ -55,7 +62,7 @@ export const footerLoginRegistro = () => {
 const divVistaLogin = () => {
   const divContenedorLogin = document.createElement('div');
 
-  divContenedorLogin.appendChild(encabezadoLoginRegistro());
+  divContenedorLogin.appendChild(encabezadoLoginRegistro()).style.justifyContent = 'flex-start';
   divContenedorLogin.appendChild(mainLoginForm());
   divContenedorLogin.appendChild(footerLoginRegistro());
 
