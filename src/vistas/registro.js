@@ -1,15 +1,17 @@
 import { registro } from '../firebase/firebase-registro.js';
+import { encabezadoLoginRegistro, footerLoginRegistro } from './login.js';
 
-// Creando login
-export const vistaRegistro = () => {
-  const divRegistro = document.createElement('div');
+
+// Main Registro
+const mainRegistroForm = () => {
+  const mainRegistro = document.createElement('main');
   const inicioRegistro = `
-         <section>
+         <section id='seccionLogo'>
             <h1>Nutrired</h1>
             <p>Crea una cuenta.</p>
          </section>
       
-         <section>
+         <section id='seccionForm'>
             <input type='text' id='name' name='nombreUsuario' placeholder='Nombre' maxlength='30' >
             <input type='text' id='lastName' name='appellidoUsuario' placeholder='Apellido' maxlength='30'>
             <input type='email' id='registroEmail' placeholder='Email' maxlength='30' name='emailUsuario'>
@@ -19,12 +21,25 @@ export const vistaRegistro = () => {
          </section> 
       `;
 
-  divRegistro.innerHTML = inicioRegistro;
-  return divRegistro;
+  mainRegistro.innerHTML = inicioRegistro;
+
+  return mainRegistro;
 };
 
 
-// Evento del boton login
+// Div contenedor vista Registro
+const divVistaRegistro = () => {
+  const divContenedorRegistro = document.createElement('div');
+
+  divContenedorRegistro.appendChild(encabezadoLoginRegistro());
+  divContenedorRegistro.appendChild(mainRegistroForm());
+  divContenedorRegistro.appendChild(footerLoginRegistro());
+};
+
+divVistaRegistro();
+
+
+// Evento del boton registro
 export const eventoBotonRegistro = () => {
   const botonRegistro = document.querySelector('#botonRegistro');
 
