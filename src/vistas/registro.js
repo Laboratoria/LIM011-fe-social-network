@@ -6,12 +6,12 @@ import { encabezadoLoginRegistro, footerLoginRegistro } from './login.js';
 const mainRegistroForm = () => {
   const mainRegistro = document.createElement('main');
   const inicioRegistro = `
-         <section>
+         <section id='seccionLogo'>
             <h1>Nutrired</h1>
             <p>Crea una cuenta.</p>
          </section>
       
-         <section>
+         <section id='seccionForm'>
             <input type='text' id='name' name='nombreUsuario' placeholder='Nombre' maxlength='30' >
             <input type='text' id='lastName' name='appellidoUsuario' placeholder='Apellido' maxlength='30'>
             <input type='email' id='registroEmail' placeholder='Email' maxlength='30' name='emailUsuario'>
@@ -33,8 +33,6 @@ const divVistaRegistro = () => {
   divContenedorRegistro.appendChild(encabezadoLoginRegistro());
   divContenedorRegistro.appendChild(mainRegistroForm());
   divContenedorRegistro.appendChild(footerLoginRegistro());
-
-  document.getElementById('root').appendChild(divContenedorRegistro);
 };
 
 divVistaRegistro();
