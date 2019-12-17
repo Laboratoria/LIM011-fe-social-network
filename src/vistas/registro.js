@@ -15,6 +15,7 @@ export const vistaRegistro = () => {
             <input type='email' id='registroEmail' placeholder='Email' maxlength='30' name='emailUsuario'>
             <input type='password' id='registroPassword' placeholder='Password' name='password' minlength='6'>
             <button type='button' id='botonRegistro'>Registrate</button>
+            <a class="" href="#/creacuenta"></a>
          </section> 
       `;
 
@@ -31,6 +32,5 @@ export const eventoBotonRegistro = () => {
     const emailRegistro = document.querySelector('#registroEmail').value;
     const passwordRegistro = document.querySelector('#registroPassword').value;
     registro(emailRegistro, passwordRegistro);
-    console.log('Hola Mundo');
   });
 };
