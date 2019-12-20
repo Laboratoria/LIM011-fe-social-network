@@ -97,7 +97,6 @@ Antes de empezar el proyecto, recuerda agregar tus objetivos de aprendizaje pend
 
 [ si ] Manipulación dinámica del DOM
 [ ] History API
-[ ] [localStorage]
 
 ## Javascript
 
