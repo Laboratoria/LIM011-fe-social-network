@@ -34,6 +34,7 @@ const mainRegistroForm = () => {
     const emailRegistro = document.querySelector('#registroEmail').value;
     const passwordRegistro = document.querySelector('#registroPassword').value;
     registro(emailRegistro, passwordRegistro);
+    console.log('hola mundo');
   });
   return mainRegistro;
 };

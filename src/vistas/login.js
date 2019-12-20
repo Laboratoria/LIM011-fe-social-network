@@ -44,6 +44,7 @@ const mainLoginForm = () => {
     const emailLogin = document.querySelector('#emailLogin').value;
     const passwordLogin = document.querySelector('#passwordLogin').value;
     inicioSesion(emailLogin, passwordLogin);
+    console.log('hola mundooo');
   });
   return mainLogin;
 };
