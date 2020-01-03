@@ -75,67 +75,65 @@ El objetivo de usar Firestore en este proyecto, es que aprendes a manejar y pers
 
 * Los test son **fundamentales** y deberán formar parte de tu definición de terminado, te recomendamos que comiences a implementarlos desde el comienzo.
 
-## Objetivos de aprendizaje
+## Objetivos de Aprendizaje
 
-Antes de empezar el proyecto, recuerda agregar tus objetivos de aprendizaje pendientes de tu proyecto
-anterior en la siguiente sección.
+Antes de empezar el proyecto, recuerda agregar tus objetivos de aprendizaje pendientes de tu proyecto anterior en la siguiente sección.
 
-### Objetivos de aprendizajes pendientes
-[ ] Manipular arrays (filter | map | sort | reduce).
-[ ] Entender el uso de bucles (for | forEach).
-[ ] Entender la diferencia entre expression y statements.
-[ ] Utilizar funciones (parámetros | argumentos | valor de retorno).
-[ ] Utilizar ES Modules (import | export).
+## Objetivos de Aprendizaje Pendientes
 
-### HTML y CSS
+[ ] Manipular arrays (filter | map | sort | reduce). 
+[ si ] Entender el uso de bucles (for | forEach). 
+[ ] Entender la diferencia entre expression y statements. 
+[ ] Utilizar funciones (parámetros | argumentos | valor de retorno). 
+[ si ] Utilizar ES Modules (import | export).
 
-* [ ] [HTML semántico](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] [CSS `flexbox`](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
+## HTML y CSS
 
-### DOM y Web APIs
+[ si ] HTML semántico
+[ ] CSS flexbox
+[ si ] Construir tu aplicación respetando el diseño realizado (maquetación).
 
-* [ ] [Manipulación dinámica del DOM](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
-* [ ] [History API](https://developer.mozilla.org/es/docs/DOM/Manipulando_el_historial_del_navegador)
-* [ ] [`localStorage`]
+## DOM y Web APIs
 
-### Javascript
+[ si ] Manipulación dinámica del DOM
+[ ] History API
 
-* [ ] [Uso de callbacks](https://developer.mozilla.org/es/docs/Glossary/Callback_function)
-* [ ] [Consumo de Promesas](https://scotch.io/tutorials/javascript-promises-for-dummies#toc-consuming-promises)
-* [ ] Uso ES modules
-([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-| [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
+## Javascript
 
-### Firebase
+[ ] Uso de callbacks
+[ ] Consumo de Promesas
+[ si ] Uso ES modules (import | export)
 
-* [ ] [Firestore](https://firebase.google.com/docs/firestore)
-* [ ] [Firebase Auth](https://firebase.google.com/docs/auth/web/start)
-* [ ] [Firebase security rules](https://firebase.google.com/docs/rules)
-* [ ] [Uso de onSnapshot](https://firebase.google.com/docs/firestore/query-data/listen)
-| [onAuthStateChanged](https://firebase.google.com/docs/auth/web/start#set_an_authentication_state_observer_and_get_user_data)
+## Firebase
 
-### Testing
+[ ] Firestore
+[ ] Firebase Auth
+[ ] Firebase security rules
+[ ] Uso de onSnapshot | onAuthStateChanged
 
-* [ ] [Testeo de tus funciones](https://jestjs.io/docs/es-ES/getting-started)
-* [ ] [Testeo asíncrono](https://jestjs.io/docs/es-ES/asynchronous)
-* [ ] [Mocking](https://jestjs.io/docs/es-ES/manual-mocks)
+## Testing
 
-### Colaboración en Github
+[ ] Testeo de tus funciones
+[ ] Testeo asíncrono
+[ ] Mocking
 
-* [ ] Branches
-* [ ] Pull Requests
-* [ ] Tags
+## Colaboración en Github
 
-### Organización en Github
+[ si ] Branches
+[ si ] Pull Requests
+[ ] Tags
 
-* [ ] Projects
-* [ ] Issues
-* [ ] Labels
-* [ ] Milestones
+## Organización en Github
 
-### Buenas prácticas de desarrollo
+[ si ] Projects
+[ si ] Issues
+[ ] Labels
+[ ] Milestones
 
-* [ ] Modularización
-* [ ] Nomenclatura / Semántica
-* [ ] Linting
+## Buenas prácticas de desarrollo
+
+[ si ] Modularización
+[ si ] Nomenclatura / Semántica
+[ si ] Linting
+
+

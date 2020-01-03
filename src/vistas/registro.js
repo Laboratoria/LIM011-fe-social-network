@@ -1,36 +1,52 @@
 import { registro } from '../firebase/firebase-registro.js';
+import { figureLoginRegistro } from './login.js';
 
-// Creando login
-export const vistaRegistro = () => {
-  const divRegistro = document.createElement('div');
+
+// Main Registro
+const mainRegistroForm = () => {
+  const mainRegistro = document.createElement('main');
   const inicioRegistro = `
-         <section>
-            <h1>Nutrired</h1>
+        <figure>
+          <img src='img/logo.jpeg' id='logoLoginRegistro'>
+        </figure>
+        <section>
             <p>Crea una cuenta.</p>
-         </section>
-      
-         <section>
-            <input type='text' id='name' name='nombreUsuario' placeholder='Nombre' maxlength='30' >
-            <input type='text' id='lastName' name='appellidoUsuario' placeholder='Apellido' maxlength='30'>
-            <input type='email' id='registroEmail' placeholder='Email' maxlength='30' name='emailUsuario'>
-            <input type='password' id='registroPassword' placeholder='Password' name='password' minlength='6'>
-            <button type='button' id='botonRegistro'>Registrate</button>
-         </section> 
+            <form id='seccionForm'>
+              <input type='text' id='name' name='nombreUsuario' placeholder='Nombre' maxlength='30' >
+              <input type='text' id='lastName' name='appellidoUsuario' placeholder='Apellido' maxlength='30'>
+              <input type='email' id='registroEmail' placeholder='Email' maxlength='30' name='emailUsuario'>
+              <input type='password' id='registroPassword' placeholder='Password' name='password' minlength='6'>
+              <button type='button' id='botonRegistro'>Registrate</button>
+            </form>
+            <div id='iconoRedesSociales'>
+                <p class='parrafo'>¿Tienes una cuenta? <a href="#/iniciasesion" id='enlaceRegistro'>Inicia Sesiòn</a></p>
+                <a href='#'><img src='https://image.flaticon.com/icons/png/512/2392/premium/2392485.png' class='iconRed'></a>
+                <a href='#'><img src='https://icon-library.net/images/google-icon-search/google-icon-search-19.jpg' class='iconRed'></a>
+            </div>
+            
+        </section>     
       `;
 
-  divRegistro.innerHTML = inicioRegistro;
-  return divRegistro;
-};
-
-
-// Evento del boton login
-export const eventoBotonRegistro = () => {
-  const botonRegistro = document.querySelector('#botonRegistro');
+  mainRegistro.innerHTML = inicioRegistro;
+  const botonRegistro = mainRegistro.querySelector('#botonRegistro');
 
   botonRegistro.addEventListener('click', () => {
     const emailRegistro = document.querySelector('#registroEmail').value;
     const passwordRegistro = document.querySelector('#registroPassword').value;
     registro(emailRegistro, passwordRegistro);
-    console.log('Hola Mundo');
+    console.log('hola mundo');
   });
+  return mainRegistro;
 };
+
+
+// Div contenedor vista Registro
+export const divVistaRegistro = () => {
+  const divContenedorRegistro = document.createElement('div');
+
+  divContenedorRegistro.appendChild(figureLoginRegistro());
+  divContenedorRegistro.appendChild(mainRegistroForm());
+  return divContenedorRegistro;
+};
+
+// Evento del boton registro

@@ -1,36 +1,61 @@
-
 import { inicioSesion } from '../firebase/firebase-inicio-sesion.js';
-import { vistaRegistro, eventoBotonRegistro } from './registro.js';
 
-const vistaLogin = () => {
+// Figure:
+export const figureLoginRegistro = () => {
+  const figureLogin = document.createElement('figure');
+  const imageEncabezado = `
+    <img src='https://image.freepik.com/vector-gratis/comida-sana-personas_24908-55204.jpg' id='imgPrincipal'>
+  `;
+
+  figureLogin.innerHTML = imageEncabezado;
+
+  return figureLogin;
+};
+
+
+// Main Login
+const mainLoginForm = () => {
   const mainLogin = document.createElement('main');
+  mainLogin.id = 'mainLogin';
+
   const inicioLogin = `
-           <section>
-              <h1>Nutrired</h1>
-              <p>Bienvenidos.</p>
-           </section>
-        
-           <section>
-              <input type='email' id='emailLogin' placeholder='Email' maxlength='30' name='usuarioLogin'>
-              <input type='password' id='passwordLogin' placeholder='Password' name='passwordLogin' minlength='6'>
-              <button type='button' id='botonLogin'>Log in</button>
-           </section> 
+           <figure>
+              <img src='img/logo.jpeg' id='logoLoginRegistro'>
+           </figure>
+          <section>
+              <p class='parrafo'>¡Bienvenido!</p>
+              <form action="#" method="post">
+                  <input type='email' id='emailLogin' class='inputRegistro' placeholder='Email' maxlength='30' name='usuarioLogin'>
+                  <input type='password' id='passwordLogin' class='inputRegistro' placeholder='Password' name='passwordLogin' minlength='6'>
+                  <button type='button' id='botonLogin'>Log in</button>
+              </form>
+              <p class='parrafo'>O bien ingresa con...</p>
+            <div id='iconoRedesSociales'>
+                <a href='#'><img src='https://image.flaticon.com/icons/png/512/2392/premium/2392485.png' class='iconRed'></a>
+                <a href='#'><img src='https://icon-library.net/images/google-icon-search/google-icon-search-19.jpg' class='iconRed'></a>
+            </div>
+            <p class='parrafo'>¿No tienes una cuenta? <a href="#/creacuenta" id='enlaceRegistro'>Regístrate</a></p>   
+          </section>   
         `;
 
   mainLogin.innerHTML = inicioLogin;
-  mainLogin.appendChild(vistaRegistro());
-  eventoBotonRegistro();
-  document.getElementById('root').appendChild(mainLogin);
+  const eventoBotonLogin = mainLogin.querySelector('#botonLogin');
+  eventoBotonLogin.addEventListener('click', () => {
+    const emailLogin = document.querySelector('#emailLogin').value;
+    const passwordLogin = document.querySelector('#passwordLogin').value;
+    inicioSesion(emailLogin, passwordLogin);
+  });
+  return mainLogin;
 };
 
-vistaLogin();
 
-// Evento del boton login
+// Div contenedor de vista Login
+export const divVistaLogin = () => {
+  const divContenedorLogin = document.createElement('div');
 
-const eventoBotonLogin = document.querySelector('#botonLogin');
-eventoBotonLogin.addEventListener('click', () => {
-  const emailLogin = document.querySelector('#emailLogin').value;
-  const passwordLogin = document.querySelector('#passwordLogin').value;
-  inicioSesion(emailLogin, passwordLogin);
-  console.log('Hola Mundo');
-});
+  divContenedorLogin.appendChild(figureLoginRegistro()).style.justifyContent = 'flex-start';
+  divContenedorLogin.appendChild(mainLoginForm());
+
+
+  return divContenedorLogin;
+};
