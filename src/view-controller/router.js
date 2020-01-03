@@ -1,8 +1,6 @@
 import { components } from '../vistas/index.js';
 
 export const changeTmp = (hash) => {
-  // const id = hash.split('/')[1];
-  console.log('changeTmp');
   const sectionMain = document.getElementById('root');
   sectionMain.innerHTML = '';
   switch (hash) {
