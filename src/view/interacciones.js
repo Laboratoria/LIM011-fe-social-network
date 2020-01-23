@@ -104,7 +104,6 @@ export const INTERACCIONES = (user) => {
         guardar.addEventListener('click', () => {
           e.preventDefault();
           const textoEditado = containerPost.querySelector('#postEditar').value;
-
           editPost(doc.id, textoEditado);
         });
       });

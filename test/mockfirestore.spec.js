@@ -10,7 +10,7 @@ const fixtureData = {
     publicaciones: {
       __doc__: {
         post001: {
-          post: 'probando mocks',
+          contenido: 'probando mocks',
           tipo: 'publico',
           uid: 'user001',
           name: 'mariangel mora',
@@ -20,7 +20,7 @@ const fixtureData = {
 
         },
         post002: {
-          post: 'probando mocks 3',
+          contenido: 'probando mocks 3',
           tipo: 'privado',
           uid: 'user001',
           name: 'karen',
@@ -31,13 +31,18 @@ const fixtureData = {
         },
       },
     },
+    usuarios: {
+      name: 'Karmen sulmo',
+      email: 'karmensulmo@gmail.com',
+      uid: 'user005',
+    },
   },
 };
 
 global.firebase = new MockFirebase(fixtureData, { isNaiveSnapshotListenerEnabled: true });
 
 const edipost = {
-  post: 'mensaje editado',
+  contenido: 'mensaje editado',
 };
 
 const objectpost = {
@@ -49,12 +54,12 @@ const tipopost = {
   tipo: 'publico',
 };
 const datausuario = {
-
   uid: 'user002',
   displayName: 'karen sulca',
   email: 'sulca753@gmail.com',
 
 };
+
 
 describe('postUser', () => {
   it('debería ser una función', () => {
@@ -95,10 +100,10 @@ describe('editPost', () => {
   it('deberia ser una función', () => {
     expect(typeof editPost).toBe('function');
   });
-  it('deberia poder editar una nota', done => editPost('post002', edipost).then(() => showPost(
+  it('deberia poder editar una nota', done => editPost('post002', edipost.contenido).then(() => showPost(
     (data) => {
       const result = data.find(note => note.id === 'post002');
-      expect(result.post).toBe('mensaje editado');
+      expect(result.contenido).toBe('mensaje editado');
       done();
     },
   )));
