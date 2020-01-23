@@ -1,8 +1,7 @@
 import MockFirebase from 'mock-cloud-firestore';
 
-
 import {
-  postUser, showPost, DeletePost, editPost,
+  postUser, showPost, DeletePost, editPost, saveUsers,
 } from '../src/firebase/controladorfirebase';
 
 const fixtureData = {
@@ -32,9 +31,9 @@ const fixtureData = {
       },
     },
     usuarios: {
-      name: 'Karmen sulmo',
-      email: 'karmensulmo@gmail.com',
-      uid: 'user005',
+      uid: 'user004',
+      displayName: 'Karmen Sulmo',
+      email: 'sulmokarmen@gmail.com',
     },
   },
 };
@@ -46,7 +45,7 @@ const edipost = {
 };
 
 const objectpost = {
-  post: 'probando mocks 2',
+  contenido: 'probando mocks 2',
 
 };
 
@@ -59,7 +58,11 @@ const datausuario = {
   email: 'sulca753@gmail.com',
 
 };
-
+const dataUsuario1 = {
+  uid: 'user005',
+  name: 'karmen sulmo',
+  email: 'karmen@gmail.com',
+};
 
 describe('postUser', () => {
   it('debería ser una función', () => {
@@ -67,7 +70,7 @@ describe('postUser', () => {
   });
   it('Debería poder agregar una nota', done => postUser(objectpost, tipopost, datausuario).then((data) => {
     // eslint-disable-next-line no-underscore-dangle
-    expect(data._data.contenido.post).toBe('probando mocks 2');
+    expect(data._data.contenido.contenido).toBe('probando mocks 2');
     done();
   }));
 });
@@ -107,4 +110,17 @@ describe('editPost', () => {
       done();
     },
   )));
+});
+
+
+describe('saveUsers', () => {
+  it('debería ser una función', () => {
+    expect(typeof saveUsers).toBe('function');
+  });
+  it('Debería poder agregar una coleccion', done => saveUsers(dataUsuario1).then(() => {
+    console.log(dataUsuario1);
+    // eslint-disable-next-line no-underscore-dangle
+    // expect(data._data.contenido.contenido).toBe('probando mocks 2');
+    done();
+  }));
 });
